@@ -1,0 +1,19 @@
+<div class="create-activity-form">
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="form.note" placeholder="Add a note about {{participantName()}}..."></textarea>
+  </mat-form-field>
+  <div class="flex-wrapper">
+    <ul class="wrapper">
+      @for (type of activityTypeValues; track type) {
+        <li>
+          <button mat-stroked-button [class.active]="form.type === type" (click)="onTypeButtonClick(type)">
+            <mat-icon>{{ ActivityTypeIcons[type] }}</mat-icon>
+          </button>
+        </li>
+      }
+    </ul>
+    <button mat-flat-button [disabled]="form.note.length < 3 || form.note.length > 256" (click)="onSubmitActivity()">
+      Submit
+    </button>
+  </div>
+</div>

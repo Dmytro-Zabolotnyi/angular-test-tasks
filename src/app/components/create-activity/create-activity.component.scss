@@ -1,0 +1,36 @@
+.create-activity-form {
+  padding: 24px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  gap: 64px;
+  .wrapper {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    button[mat-stroked-button] {
+      display: flex;
+      align-items: center;
+      min-width: 36px;
+      font-size: 18px;
+      background-color: #fff;
+      padding: 0;
+      border-radius: 50%;
+      &.active {
+        background-color: cornflowerblue;
+        mat-icon {
+          color: #fff;
+        }
+      }
+      mat-icon {
+        margin: 0;
+        color: grey;
+      }
+    }
+  }
+}

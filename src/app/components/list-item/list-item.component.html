@@ -1,0 +1,14 @@
+<div class="app-list-item">
+  <div class="app-list-item-side-info">
+    <div class="app-list-item-side-info-icon">
+      <div class="icon">
+        <mat-icon>{{type() ? ActivityTypeIcons[type() || ActivityType.Message] : 'list'}}</mat-icon>
+      </div>
+      <div class="divider"></div>
+    </div>
+    <div class="app-list-item-side-info-date">{{date() ? dayjs(date()).fromNow(true) : ""}}</div>
+  </div>
+  <div class="app-list-item-slot">
+    <ng-content></ng-content>
+  </div>
+</div>

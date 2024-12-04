@@ -1,0 +1,19 @@
+<div class="app-activity">
+  <div class="app-activity-content">
+    <div class="app-activity-participants">
+      <app-participant [participant]="activity().creator"></app-participant>
+      <span>&nbsp;{{NoteDescription[activity().type]}}&nbsp;</span>
+      <app-participant [participant]="activity().participant"></app-participant>
+    </div>
+    <div class="app-activity-note">{{activity().note}}</div>
+  </div>
+  <div class="app-activity-actions">
+
+    <button mat-flat-button [matMenuTriggerFor]="menu">
+      <mat-icon color="primary">keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onDeleteClick()">Delete</button>
+    </mat-menu>
+  </div>
+</div>
