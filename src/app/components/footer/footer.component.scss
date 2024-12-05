@@ -1,0 +1,52 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 241px;
+  width: 100%;
+  background-color: #292740;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    height: 102px;
+    justify-content: flex-start;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 93px;
+    background: url('assets/images/sine.svg') center/cover no-repeat;
+    transform: rotate(180deg) scaleX(-1);
+    @media only screen and (max-width: 1024px) {
+      height: 66px;
+    }
+    @media only screen and (max-width: 768px) {
+      height: 55px;
+    }
+    @media only screen and (max-width: 480px) {
+      height: 47px;
+    }
+  }
+}
+
+p {
+  width: 100%;
+  max-width: 1314px;
+  font-size: 50px;
+  line-height: 75px;
+  color: #F5F6FA;
+  padding: 0 16px;
+  @media only screen and (max-width: 1024px) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  @media only screen and (max-width: 600px) {
+    max-width: 150px;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0 16px;
+    margin-left: 28px;
+  }
+}

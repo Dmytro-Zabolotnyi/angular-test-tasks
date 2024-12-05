@@ -1,0 +1,136 @@
+header {
+  display: flex;
+  flex-direction: column;
+  height: 1040px;
+  background: linear-gradient(135deg, #6C5CE7 0%, #A29BFE 100%);
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 88px;
+    background: url('assets/images/sine.svg') center/cover no-repeat;
+    transform: scaleX(-1);
+    @media only screen and (max-width: 1024px) {
+      height: 66px;
+    }
+    @media only screen and (max-width: 768px) {
+      height: 55px;
+    }
+    @media only screen and (max-width: 480px) {
+      height: 47px;
+    }
+  }
+  @media only screen and (max-width: 1366px) {
+    height: unset;
+  }
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding-top: 80px;
+  @media only screen and (max-width: 1500px) {
+    gap: 40px;
+    padding: 60px 16px;
+  }
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 32px 16px;
+  }
+  @media only screen and (max-width: 600px) {
+    align-items: flex-start;
+    padding: 2px 16px 20px 45px;
+  }
+}
+
+.wrapper {
+  width: 640px;
+  padding-top: 81px;
+  @media only screen and (max-width: 1500px) {
+    width: unset;
+  }
+  @media only screen and (max-width: 1366px) {
+    padding-top: 0;
+  }
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 23px;
+  }
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 114.3px;
+  color: #fff;
+  margin-bottom: 60px;
+  @media only screen and (max-width: 1366px) {
+    font-size: 75px;
+    line-height: 90px;
+    margin-bottom: 50px;
+  }
+  @media only screen and (max-width: 1024px) {
+    font-size: 60px;
+    line-height: 75px;
+    margin-bottom: 35px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 50px;
+    line-height: 57px;
+    margin-bottom: 30px;
+  }
+}
+
+.header-button {
+  height: 68px;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  color: #F5F6FA;
+  background-color: #FFB400;
+  padding: 0 65px;
+  border-radius: 34px;
+  @media only screen and (max-width: 1366px) {
+    height: 60px;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  @media only screen and (max-width: 1024px) {
+    height: 50px;
+    font-size: 25px;
+    line-height: 40px;
+    padding: 0 50px;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 34px;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 0 38px;
+  }
+}
+
+.header-image {
+  height: 640px;
+  width: 640px;
+  background: url('assets/images/home-header-people-holding-globe.svg') center/contain no-repeat;
+  @media only screen and (max-width: 1366px) {
+    height: 500px;
+    width: 500px;
+  }
+  @media only screen and (max-width: 1024px) {
+    height: 400px;
+    width: 400px;
+  }
+  @media only screen and (max-width: 600px) {
+    height: 240px;
+    width: 240px;
+    margin-left: 15px;
+  }
+}
